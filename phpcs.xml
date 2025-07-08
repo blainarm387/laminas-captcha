@@ -16,6 +16,4 @@
     <file>test</file>
     <exclude-pattern>*/TestAsset/*</exclude-pattern>
 
-    <!-- Include all rules from Laminas Coding Standard -->
-    <rule ref="LaminasCodingStandard" />
 </ruleset>
