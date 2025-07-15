@@ -37,9 +37,11 @@ class ReCaptcha extends AbstractAdapter
         self::BAD_CAPTCHA   => 'Captcha value is wrong',
     ];
 
-    public function __construct(ReCaptchaService $service)
+    public function __construct(?ReCaptchaService $service = null)
     {
-        $this->service = $service;
+        if (!is_null($service)) {
+            $this->service = $service;
+        }
         parent::__construct();
     }
 
@@ -102,5 +104,10 @@ class ReCaptcha extends AbstractAdapter
     public function getService(): ReCaptchaService
     {
         return $this->service;
+    }
+
+    public function setService(ReCaptchaService $service): void
+    {
+        $this->service = $service;
     }
 }
