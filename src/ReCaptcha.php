@@ -98,4 +98,9 @@ class ReCaptcha extends AbstractAdapter
     {
         return "captcha/recaptcha";
     }
+
+    public function getService(): ReCaptchaService
+    {
+        return $this->service;
+    }
 }
